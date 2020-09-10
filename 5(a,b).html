@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validate(){
+			var num = f1.txtNum.value;
+			if(num = "" || isNaN(num)){
+				alert("Enter an integer value");
+				f1.txtNum.focus();
+				return false;
+			}
+			var code = f1.txtPass.value;
+			var recode = f1.txtRePass.value
+			if(code != recode){
+				alert("Password do not match");
+				f1.txtRePass.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<form name="f1" onsubmit="return validate()">
+		<table cellpadding="10px">
+			<tr>
+				<td width="150px">Number</td>
+				<td><input type="text" name="txtNum"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="txtPass"></td>
+			</tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td><input type="password" name="txtRePass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="SubBtn" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

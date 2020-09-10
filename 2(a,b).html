@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function change(){
+			var newtext = document.getElementById('h1txt').innerHTML = "This is new text";
+			return newtext
+		}
+		function display(){
+			document.getElementById('p1').innerHTML = Date();
+		}
+	</script>
+</head>
+<body>
+	<h1 id="h1txt" onclick="change()">This is old text click to change</h1>
+	<p>Click the button to diplay date and time</p>
+	<button onclick="display()">Click Me</button>
+	<p id="p1"></p>
+</body>
+</html>

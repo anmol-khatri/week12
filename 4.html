@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var btn = document.querySelector('button');
+		function random(number){
+			return Math.floor(Math.random()*(number+1));
+		}
+		function change(){
+			var col = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+			document.getElementById('p1').style.backgroundColor = col;
+		}
+	</script>
+</head>
+<body>
+	<p id="p1">Hello! I am a paragraph with background color.<br>You can click on the button below written Color to give me color and change it randomly.</p>
+	<button onclick="change()">Color</button>
+</body>
+</html>
